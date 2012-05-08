@@ -1,0 +1,18 @@
+Sloth
+=====
+
+Sloth is a Ruby gem that implements the `lazy()` function as robustly as
+possible.
+
+	obj = lazy{ p(:lazily_evaluated) }
+
+Sloths can only (easily) be distinguished from non-sloths by the sloth? method.
+
+	lazy{:sloth}.sloth? # => true
+	lazy{:sloth}.class  # => Symbol
+	:sloth.sloth?       # => false
+
+License
+-------
+
+Sloth is in the public domain.
